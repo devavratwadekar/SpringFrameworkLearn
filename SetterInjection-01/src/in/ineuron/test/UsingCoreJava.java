@@ -4,7 +4,7 @@ import java.util.Date;
 
 import in.ineuron.comp.WishMessageGenerator;
 
-public class TestApp {
+public class UsingCoreJava {
 
 	public static void main(String[] args) {
 
