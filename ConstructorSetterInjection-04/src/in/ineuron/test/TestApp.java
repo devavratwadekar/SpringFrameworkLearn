@@ -13,12 +13,10 @@ public class TestApp {
 		XmlBeanFactory factory = new XmlBeanFactory(resource);
 
 		Student std1 = factory.getBean("std1", Student.class);
-		System.out.println(std1);
-		System.out.println();
+		System.out.println(std1 + "\n");
 
 		Student std2 = factory.getBean("std2", Student.class);
-		System.out.println(std2);
-		System.out.println();
+		System.out.println(std2 + "\n");
 
 		Student std3 = factory.getBean("std3", Student.class);
 		System.out.println(std3);
