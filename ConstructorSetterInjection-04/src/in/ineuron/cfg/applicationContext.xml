@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="std1" class="in.ineuron.comp.Student">
+	<!-- using type attribute :: there is sequence is mandatory  -->
+		<constructor-arg type="java.lang.String" value="MI" />
+		<constructor-arg type="java.lang.Integer" value="10" />
+		<constructor-arg type="java.lang.String" value="Sachin" />
+		<constructor-arg type="java.lang.Float" value="54.5f" />
+	</bean>
+
+	<bean id="std2" class="in.ineuron.comp.Student">
+	<!-- using index attribute :: not good for READABILTY ,sequence is NOT mandatory -->
+		<constructor-arg index="1" value="Dhoni" />
+		<constructor-arg index="2" value="CSK" />
+		<constructor-arg index="3" value="51.5f" />
+		<constructor-arg index="0" value="7" />
+	</bean>
+	
+	<bean id="std3" class="in.ineuron.comp.Student">
+	<!-- using index attribute :: GOOD for READABILTY and sequence is NOT mandatory -->
+		<constructor-arg name="sname" value="Virat" />
+		<constructor-arg name="addr" value="RCB" />
+		<constructor-arg name="avg" value="55.5f" />
+		<constructor-arg name="sno" value="18" />
+	</bean>
+	
+</beans>
