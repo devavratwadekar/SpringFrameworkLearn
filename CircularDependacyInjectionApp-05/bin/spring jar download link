@@ -1,0 +1,7 @@
+=> Spring jars can be downloaded from the following link
+	https://repo.spring.io/ui/native/release/org/springframework/spring/
+
+=> Scroll down and search for link with Spring5.X version(5.3.17)
+
+=> To add the namespace(xmlns),while writing the configuration file use the following location
+	E:\jars\spring-5.3.17-dist\spring-framework-5.3.17\docs\reference\html\core.pdf

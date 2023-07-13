@@ -3,7 +3,8 @@ package in.ineuron.test;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 
-import in.ineuron.comp.Flipkart;
+import in.ineuron.comp.A;
+import in.ineuron.comp.B;
 
 public class TestApp {
 
@@ -12,18 +13,17 @@ public class TestApp {
 		DefaultListableBeanFactory factory = new DefaultListableBeanFactory();
 		XmlBeanDefinitionReader reader = new XmlBeanDefinitionReader(factory);
 		reader.loadBeanDefinitions("in/ineuron/cfg/applicationContext.xml");
-		System.out.println("*****Container Started*******");
+		System.out.println("*****Container Started*******\n");
 
 		System.in.read();
 
-		Flipkart flipkart = factory.getBean("fpkt", Flipkart.class);
-		System.out.println(flipkart);
-
+		A aObj = factory.getBean("a1", A.class);
+		
 		System.out.println();
-		String result = flipkart.doShopping(new String[] { "mango", "banana" }, new float[] { 123.43f, 234.54f });
-		System.out.println(result);
 
-		System.out.println("\n*****Container Stopped*******");
+		B bObj = factory.getBean("b1", B.class);
+
+		System.out.println("*****Container Stopped*******");
 	}
 
 }

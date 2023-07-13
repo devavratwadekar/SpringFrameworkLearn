@@ -6,7 +6,7 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="std1" class="in.ineuron.comp.Student">
-	<!-- using type attribute :: there is sequence is mandatory  -->
+	<!-- using type attribute :: not good for READABILTY , there is sequence is mandatory  -->
 		<constructor-arg type="java.lang.String" value="MI" />
 		<constructor-arg type="java.lang.Integer" value="10" />
 		<constructor-arg type="java.lang.String" value="Sachin" />
@@ -29,4 +29,11 @@
 		<constructor-arg name="sno" value="18" />
 	</bean>
 	
+	<bean id="std4" class="in.ineuron.comp.Student">
+	<!-- using index attribute :: NOT for READABILTY and sequence is MORE IMPORTENT -->
+		<constructor-arg name="sname" type="java.lang.String" index="1" value="Warner" />
+		<constructor-arg name="addr" type="java.lang.String" index="2" value="DC" />
+		<constructor-arg name="avg" type="java.lang.Float" index="3" value="52.5f" />
+		<constructor-arg name="sno" type="java.lang.Integer" index="" value="99" />
+	</bean>
 </beans>

@@ -21,7 +21,7 @@ public class AdvancedBeanFactoryApp {
 
 		Student student = factory.getBean("std3", Student.class);
 		System.out.println(student);
-		System.out.println("****Container Closed****");
+		System.out.println("\n****Container Closed****");
 	}
 
 }

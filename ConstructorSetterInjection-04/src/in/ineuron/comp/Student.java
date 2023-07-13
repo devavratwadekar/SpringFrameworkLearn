@@ -12,7 +12,6 @@ public class Student {
 	}
 
 	public Student(Integer sno, String sname, String addr, Float avg) {
-		super();
 		this.sno = sno;
 		this.sname = sname;
 		this.addr = addr;

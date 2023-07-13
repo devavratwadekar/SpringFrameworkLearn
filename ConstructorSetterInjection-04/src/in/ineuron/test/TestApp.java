@@ -19,8 +19,10 @@ public class TestApp {
 		System.out.println(std2 + "\n");
 
 		Student std3 = factory.getBean("std3", Student.class);
-		System.out.println(std3);
+		System.out.println(std3 + "\n");
 
+		Student std4 = factory.getBean("std4", Student.class);
+		System.out.println(std4);
 	}
 
 }
