@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="sysDate" class="java.util.Date" />
+	<bean id="dob" class="java.util.Date">
+		<property name="year" value="97" />
+		<property name="month" value="6" />
+		<property name="date" value="25" />
+	</bean>
+	<!-- Array Injection -->
+	<bean id="marks" class="in.ineuron.comp.MarksInfo">
+		<property name="marksInfo">
+			<array>
+				<value>97</value>
+				<value>78</value>
+				<value>65</value>
+				<value>35</value>
+			</array>
+		</property>
+	</bean>
+
+	<!-- List Injection -->
+	<bean id="clg" class="in.ineuron.comp.College">
+		<property name="studName">
+			<list>
+				<value>Subodh</value>
+				<value>Prajay</value>
+				<value>Nitin</value>
+				<value>Manoj</value>
+			</list>
+		</property>
+		<property name="listDate">
+			<list>
+				<ref bean="sysDate" />
+				<ref bean="dob" />
+			</list>
+		</property>
+	</bean>
+
+	<!-- Set Injection -->
+	<bean id="contact" class="in.ineuron.comp.ContactInfo">
+		<property name="phoneNumber">
+			<set value-type="">
+				<value>9999999999</value>
+				<value>8888888888</value>
+				<value>7777777777</value>
+				<value>7777777777</value>
+			</set>
+		</property>
+		<property name="dates">
+			<set>
+				<ref bean="sysDate" />
+				<ref bean="dob" />
+			</set>
+		</property>
+	</bean>
+
+	<bean id="uInfo" class="in.ineuron.comp.UniversityInfo">
+		<!-- Map Injection -->
+		<property name="facultyinfo">
+			<map key-type="java.lang.Integer" value-type="java.lang.String">
+				<entry>
+					<key>
+						<value>10</value>
+					</key>
+					<value>Sachin</value>
+				</entry>
+				<entry key="7" value="Dhoni" />
+				<entry key="18" value="Kohli" />
+			</map>
+		</property>
+		<property name="datesInfo">
+			<map key-type="java.lang.String" value-type="java.lang.Date">
+				<entry>
+					<key>
+						<value>Today</value>
+					</key>
+					<ref bean="sysDate" />
+				</entry>
+				<entry key="DOB" value-ref="dob" />
+			</map>
+		</property>
+		<!-- Properties Injection -->
+		<property name="iplInfo">
+			<props>
+				<prop key="RCB">FAF</prop>
+				<prop key="GT">Pandya</prop>
+				<prop key="MI">Rphit</prop>
+				<prop key="LSG">Rahul</prop>
+				<prop key="CSK">Dhoni</prop>
+				<prop key="KKR">Iyer</prop>
+			</props>
+		</property>
+	</bean>
+
+
+</beans>
