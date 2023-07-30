@@ -6,12 +6,13 @@
         https://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Dependent Object -->
-	<bean id="courier" class="in.ineuron.comp.DTDC"/>
-	<bean id="bDart" class="in.ineuron.comp.BlueDart" primary="true"/>
-	<bean id="fFlight" class="in.ineuron.comp.FirstFlight"/>
+	<bean id="dtdc" class="in.ineuron.comp.DTDC" autowire-candidate="false"/>
+	<bean id="bDart" class="in.ineuron.comp.BlueDart" autowire-candidate="false"/>
+	<bean id="fFlight" class="in.ineuron.comp.FirstFlight" autowire-candidate="false"/>
 	
 	<!-- Target Object -->
-	<bean id="fpkt" class="in.ineuron.comp.Flipkart" autowire="constructor">
+	<bean id="fpkt" class="in.ineuron.comp.Flipkart" autowire="no">
 		<constructor-arg name="discount" value="10"/>
+		<constructor-arg name="courier" ref="dtdc"/>
 	</bean>
 </beans>
