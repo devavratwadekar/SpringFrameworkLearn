@@ -9,7 +9,6 @@ import org.springframework.beans.factory.annotation.Qualifier;
 public class Flipkart {
 
 	private Courier courier;
-	
 	private Float discount;
 
 	static {
