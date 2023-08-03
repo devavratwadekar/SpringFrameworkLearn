@@ -13,4 +13,5 @@
 		<property name="pname" value="sachin" /> -->
 		<property name="paddress" value="MI" />
 	</bean>
+	<context:annotation-config/>
 </beans>
