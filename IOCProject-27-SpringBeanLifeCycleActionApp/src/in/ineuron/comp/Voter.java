@@ -34,6 +34,7 @@ public class Voter {
 	@PostConstruct
 	public void myInit() {
 		System.out.println("Voter.myInit()");
+		
 		dov = new Date();
 		boolean flag = false;
 
